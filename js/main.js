@@ -36,7 +36,7 @@ async function main() {
     });
 
   } catch (error) {
-    status.textContent = `Failed to load events: ${error.message}`;
+    status.textContent = `Failed to load events. ${error.message}`;
   }
 }
 
