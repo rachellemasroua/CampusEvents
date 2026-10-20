@@ -24,11 +24,12 @@ export function renderEvents(events, container){
     }
 
     container.innerHTML = events
-        .map(toCard)
-        .join('');
+        .map(toCard) //calls toCard() for every event and creates an array of HTML strings
+        .join(''); //combines those strings into one HTML string without adding separators
 }
 
 export function fillCategories(events, selectElement) {
+    //purpose: automatically fills a dropdown menu with the event categories
     const categories = [...new Set(
         events.map((event) => event.category)
     )].sort();
