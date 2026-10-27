@@ -1,0 +1,14 @@
+### health
+GET http://localhost:3000/health
+
+### events
+GET http://localhost:3000/api/events
+
+### one event
+GET http://localhost:3000/api/events/4
+
+### missing event -> 404 from the service (HttpError)
+GET http://localhost:3000/api/events/9999
+
+### unknown route -> 404 handler
+GET http://localhost:3000/api/nope
